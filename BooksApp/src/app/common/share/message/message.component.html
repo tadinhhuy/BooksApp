@@ -1,7 +1,0 @@
-<div class="warning-message" *ngIf="messageService?.getCurrentMessage()">
-    <div class="removeButton" (click)="removeMessage()">X</div>
-    <div>
-        <div>{{messageService.getCurrentMessage().messageType}}</div>
-        <div>{{messageService.getCurrentMessage().messageDisplay}}</div>
-    </div>
-</div>
