@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Add Book</h2>
+<form *ngIf="bookForm" [formGroup]="bookForm" (ngSubmit)="createBook()" class="book-edit-container">
+    <mat-form-field>
+        <input matInput type="number"  placeholder="Book Id" formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="text" maxlength="30" placeholder="Title" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="text" maxlength="30" placeholder="Author" formControlName="author">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput max="4" type="number" placeholder="Number Book" formControlName="number">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-button color="warn" [disabled]="!bookForm.valid" type="submit">Save</button>
+</form>
+<h4><button mat-button color="warn" (click)="buttonBack()">Back to the list</button></h4>
+</div>
