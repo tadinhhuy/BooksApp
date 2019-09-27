@@ -9,7 +9,7 @@ export interface BookItem {
   title: string;
   author: string;
   number: number;
-  date: number;
+  date: string;
 }
 
 @Injectable({
@@ -27,7 +27,7 @@ export class BooksService {
       title: "Harry Potter",
       author: "J.K. Rowling",
       number: 32,
-      date: 1998 - 12 - 0o5,
+      date: '1998/12/05',
       id: 1
     },
     {
@@ -35,41 +35,41 @@ export class BooksService {
       title: "The Great Gatsby",
       author: "F. Scott Fitzgerald",
       number: 34,
-      date: 1885 - 0o1 - 12
+      date: '1885/01/12'
     },
     {
       title: "The Catcher in the Rye",
       author: "J.D. Salinger",
       number: 12,
-      date: 2019 - 0o2 - 0o2,
+      date: '2019/02/02',
       id: 3
     },
     {
       title: "The Hobbit",
       author: "J.R.R. Tolkien",
       number: 51,
-      date: 2006 - 0o1 - 0o3,
+      date: '2006/01/03',
       id: 4
     },
     {
       title: "Fahrenheit 451",
       author: "Ray Bradbury",
       number: 18,
-      date: 2005 - 0o3 - 0o3,
+      date: '2005/03/03',
       id: 5
     },
     {
       title: "Pride and Prejudice",
       author: "Jane Austen",
       number: 15,
-      date: 1859 - 0o3 - 0o1,
+      date: '1859/03/01',
       id: 6
     },
     {
       title: "To Kill a Mockingbir",
       author: "Alexander",
       number: 132,
-      date: 2018 - 12 - 31,
+      date: '2018/12/31',
       id: 16
     },
     {
@@ -77,7 +77,7 @@ export class BooksService {
       title: "To Kill a Mockingbir",
       author: "Alexander",
       number: 13,
-      date: 2018 - 12 - 31
+      date: '2018/12/31'
     }
   ];
 

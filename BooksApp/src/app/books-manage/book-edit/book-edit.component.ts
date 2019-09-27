@@ -36,7 +36,7 @@ export class BookEditComponent implements OnInit {
       title: [''],
       author: [''],
       number: [],
-      date: [],
+      date: [''],
     })
   }
 
@@ -47,6 +47,7 @@ export class BookEditComponent implements OnInit {
   setForm() {
     this.bookService.getBook(this.bookID).subscribe(item => {
       if (item) {
+        console.log(item);
         this.bookForm.setValue({
           title: item.title,
           author: item.author,
